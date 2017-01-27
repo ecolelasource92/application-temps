@@ -1,0 +1,12 @@
+import time
+a = 0
+t1 = time.time()
+for fuck in range(1000):
+    if a == 1: # remplacer par "if stop :"
+        break
+    t2 = time.time() - t1
+    if a == 1: # remplacer par "if stop :"
+        break
+    print(t2)
+    if a == 1: # remplacer par "if stop :"
+        break
