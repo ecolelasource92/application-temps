@@ -1,0 +1,18 @@
+import time
+from time import*
+temps = 100
+nbPeriodes = int(input())
+tempsParPeriode = int(input())                    #en secondes
+for eachPeriode in range(nbPeriodes) : 
+   t1 = time.time()
+   stop()
+   while temps > 1 :
+      stop()
+      sleep(1)                                    
+      stop()
+      t2 = time.time() - t1
+      stop()
+      temps = tempsParPeriode - t2
+      stop()
+   if 1 <= temps <= 1 :
+      "ça vibre"
