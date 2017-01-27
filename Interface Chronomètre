@@ -1,0 +1,25 @@
+from kivy.lang import Builder
+from kivy.app import App
+
+monEcran = Builder.load_string('''
+Accordion:
+    orientation: "vertical"
+    min_space: 44
+    anim_duration: 1
+    anim_func: 'out_elastic'
+    AccordionItem:
+        title: "Chronomètre"
+        Button:
+            text:"Pause"
+            size_hint:(.80, .80)
+            pos:(80, 20)
+        Button:
+            text:"Stop"
+            size_hint:(.80, .80)
+            pos:(80, 20)
+    AccordionItem:
+        title: "Diapositive"
+    AccordionItem:
+        title: "Sport"
+
+''')
