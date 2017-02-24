@@ -1,11 +1,17 @@
+from time import *
 import time
-from time import*
+def stop() :
+   if buttonStop == False :
+      for fonctionStop in range(1) :
+         break
+buttonStop = True
 temps = 100
-nbPeriodes = int(input())
-tempsParPeriode = int(input())                    #en secondes
+nbPeriodes = int(input("nombre de périodes : "))
+tempsParPeriode = int(input("temps par période (secondes) : "))                    #en secondes
 for eachPeriode in range(nbPeriodes) : 
    t1 = time.time()
    stop()
+   temps = 2
    while temps > 1 :
       stop()
       sleep(1)                                    
@@ -13,6 +19,8 @@ for eachPeriode in range(nbPeriodes) :
       t2 = time.time() - t1
       stop()
       temps = tempsParPeriode - t2
+      print(temps)
       stop()
-   if 1 <= temps <= 1 :
-      "ça vibre"
+   if -1 <= temps <= 1 :
+       sleep(temps)
+       print("vibration")
