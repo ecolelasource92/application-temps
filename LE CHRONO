@@ -1,0 +1,38 @@
+def timer():
+        sec = 0
+        min = 0
+        dixsec = 0
+
+        t1 = time.time()
+        os.system('cls')
+        for loop in range(100):
+            print(min, ':', sec, ':', dixsec, '')
+
+            dixsec += 1
+            if dixsec >= 10:
+                sec += 1
+                dixsec = 0
+            if sec == 60:
+                min += 1
+                sec = 0
+            t2 = time.time() - t1
+        taffichage = t2 / 100
+
+        sec = 0
+        min = 0
+        dixsec = 0
+
+        tamere = input()
+
+        os.system('cls')
+        while sec <= 60 and min < 2:
+
+            print(min, ':', sec, ':', dixsec, '')
+            time.sleep(0.1 - taffichage)
+            dixsec += 1
+            if dixsec >= 10:
+                sec += 1
+                dixsec = 0
+            if sec == 60:
+                min += 1
+                sec = 0
