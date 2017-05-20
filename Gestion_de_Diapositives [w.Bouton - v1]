@@ -1,0 +1,68 @@
+from time import *
+import time
+from kivy.lang import Builder
+from kivy.app import App
+
+
+monEcran = Builder.load_string('''
+
+Button:
+    id: btnExit
+    font_size: 60
+    height: 44
+    background_color: (0.5, 1.0, 0.5, 1.0)
+    text: "Exit"
+    on_press: app.stop()
+''')
+
+class AccordionApp(App):
+    def build(self):
+        return monEcran
+
+
+
+
+
+# Variables :
+condition = False
+buttonStop = True
+temps = 100
+nbPeriodes = int(input("nombre de périodes : "))
+tempsParPeriode = int(input("temps par période (secondes) : "))  # en secondes
+
+
+# Fonctions :
+def stop():
+    if buttonStop == False:
+        condition = True
+
+
+# Programme :
+for eachPeriode in range(nbPeriodes):
+    stop()
+    if condition:
+        break
+    t1 = time.time()
+    stop()
+    if condition:
+        break
+    temps = 2
+    while temps > 1:
+        stop()
+        if condition:
+            break
+        sleep(1)
+        stop()
+        if condition:
+            break
+        t2 = time.time() - t1
+        stop()
+        if condition:
+            break
+        temps = tempsParPeriode - t2
+        stop()
+        if condition:
+            break
+    if -1 <= temps <= 1:  # marge d'erreur corrigée ensuite par le sleep(temps)
+        sleep(temps)
+        AccordionApp().run()
